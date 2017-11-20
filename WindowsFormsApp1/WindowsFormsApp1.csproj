@@ -52,6 +52,7 @@
       <DependentUpon>addUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="BuscaDeUsuarios.cs" />
+    <Compile Include="Chamado.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Component1.cs">
       <SubType>Component</SubType>
@@ -73,7 +74,7 @@
     <Compile Include="ExcluirUsuario.Designer.cs">
       <DependentUpon>ExcluirUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include=".cs" />
+    <Compile Include="ManutencaoChamado.cs" />
     <Compile Include="ManutencaoDeCliente.cs" />
     <Compile Include="ManutencaoDeUsuarios.cs" />
     <Compile Include="Principal.cs">
@@ -120,6 +121,8 @@
     <Compile Include="relatorios.Designer.cs">
       <DependentUpon>relatorios.cs</DependentUpon>
     </Compile>
+    <Compile Include="PrioridadeChamado.cs" />
+    <Compile Include="StatusChamado.cs" />
     <Compile Include="TipoUsuario.cs" />
     <Compile Include="Usuario.cs" />
     <EmbeddedResource Include="addUsuario.resx">
