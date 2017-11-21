@@ -14,5 +14,16 @@ namespace WindowsFormsApp1
         public String endereco{ get; set; }
         public String uf { get; set; }
         public Usuario usuario { get; set; }
+
+        public Cliente() { }
+        public Cliente(String id, String nome) {
+            this.id = id;
+            this.nome = nome;
+        }
+
+        public override string ToString()
+        {
+            return nome;
+        }
     }
 }

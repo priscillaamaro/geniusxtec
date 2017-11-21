@@ -13,5 +13,16 @@ namespace WindowsFormsApp1
         public TipoUsuario tipoUsuario { get; set; }
         public String nome { get; set; }
         public String descricaoTipoUsuario { get{ return tipoUsuario.descricao; } }
+
+        public Usuario() { }
+        public Usuario(String login, String nome) {
+            this.login = login;
+            this.nome = nome;
+        }
+
+        public override string ToString()
+        {
+            return nome + " (" + login + ")";
+        }
     }
 }

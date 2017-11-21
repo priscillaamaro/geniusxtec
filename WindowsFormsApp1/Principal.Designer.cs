@@ -39,16 +39,6 @@
             this.btnSalvarAltr = new System.Windows.Forms.Button();
             this.btncriarUsuario = new System.Windows.Forms.Button();
             this.dataGridChamado = new System.Windows.Forms.DataGridView();
-            this.colunaDataAbertura = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colunaIdCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColunaNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColunaDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colunastatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColunaPrioridade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colunaReponsavel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColunadataFechamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColunaMeiodecontato = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColunaEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtDescChamado = new System.Windows.Forms.TextBox();
             this.lblStatus = new System.Windows.Forms.Label();
             this.lblRespons = new System.Windows.Forms.Label();
@@ -65,6 +55,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.ColunaChamado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColunaDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colunaIdCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colunastatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColunaPrioridade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colunaReponsavel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colunaDataAbertura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColunaLoginCriacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColunadataFechamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridChamado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureGenius)).BeginInit();
             this.SuspendLayout();
@@ -171,21 +170,21 @@
             // 
             // dataGridChamado
             // 
+            this.dataGridChamado.AllowUserToAddRows = false;
             this.dataGridChamado.AllowUserToDeleteRows = false;
             this.dataGridChamado.AllowUserToOrderColumns = true;
             this.dataGridChamado.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridChamado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridChamado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colunaDataAbertura,
-            this.colunaIdCliente,
-            this.ColunaNome,
+            this.ColunaChamado,
             this.ColunaDescricao,
+            this.colunaIdCliente,
             this.colunastatus,
             this.ColunaPrioridade,
             this.colunaReponsavel,
-            this.ColunadataFechamento,
-            this.ColunaMeiodecontato,
-            this.ColunaEmail});
+            this.colunaDataAbertura,
+            this.ColunaLoginCriacao,
+            this.ColunadataFechamento});
             this.dataGridChamado.GridColor = System.Drawing.Color.Navy;
             this.dataGridChamado.Location = new System.Drawing.Point(12, 156);
             this.dataGridChamado.Name = "dataGridChamado";
@@ -193,66 +192,6 @@
             this.dataGridChamado.Size = new System.Drawing.Size(1144, 345);
             this.dataGridChamado.TabIndex = 9;
             this.dataGridChamado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridChamado_CellContentClick);
-            // 
-            // colunaDataAbertura
-            // 
-            this.colunaDataAbertura.HeaderText = "Data Abertura";
-            this.colunaDataAbertura.Name = "colunaDataAbertura";
-            this.colunaDataAbertura.ReadOnly = true;
-            // 
-            // colunaIdCliente
-            // 
-            this.colunaIdCliente.HeaderText = "Id Cliente";
-            this.colunaIdCliente.Name = "colunaIdCliente";
-            this.colunaIdCliente.ReadOnly = true;
-            // 
-            // ColunaNome
-            // 
-            this.ColunaNome.HeaderText = "Nome";
-            this.ColunaNome.Name = "ColunaNome";
-            this.ColunaNome.ReadOnly = true;
-            // 
-            // ColunaDescricao
-            // 
-            this.ColunaDescricao.HeaderText = "Descrição";
-            this.ColunaDescricao.Name = "ColunaDescricao";
-            this.ColunaDescricao.ReadOnly = true;
-            // 
-            // colunastatus
-            // 
-            this.colunastatus.HeaderText = "Status";
-            this.colunastatus.Name = "colunastatus";
-            this.colunastatus.ReadOnly = true;
-            // 
-            // ColunaPrioridade
-            // 
-            this.ColunaPrioridade.HeaderText = "Prioridade";
-            this.ColunaPrioridade.Name = "ColunaPrioridade";
-            this.ColunaPrioridade.ReadOnly = true;
-            // 
-            // colunaReponsavel
-            // 
-            this.colunaReponsavel.HeaderText = "Responsável";
-            this.colunaReponsavel.Name = "colunaReponsavel";
-            this.colunaReponsavel.ReadOnly = true;
-            // 
-            // ColunadataFechamento
-            // 
-            this.ColunadataFechamento.HeaderText = "Data Fechamento";
-            this.ColunadataFechamento.Name = "ColunadataFechamento";
-            this.ColunadataFechamento.ReadOnly = true;
-            // 
-            // ColunaMeiodecontato
-            // 
-            this.ColunaMeiodecontato.HeaderText = "Meio de contato";
-            this.ColunaMeiodecontato.Name = "ColunaMeiodecontato";
-            this.ColunaMeiodecontato.ReadOnly = true;
-            // 
-            // ColunaEmail
-            // 
-            this.ColunaEmail.HeaderText = "Email";
-            this.ColunaEmail.Name = "ColunaEmail";
-            this.ColunaEmail.ReadOnly = true;
             // 
             // txtDescChamado
             // 
@@ -295,11 +234,11 @@
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.Navy;
             this.lblTitulo.Location = new System.Drawing.Point(358, 9);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(492, 44);
+            this.lblTitulo.Size = new System.Drawing.Size(504, 39);
             this.lblTitulo.TabIndex = 15;
             this.lblTitulo.Text = "Gerenciamento de Chamados";
             // 
@@ -426,6 +365,66 @@
             this.label3.TabIndex = 28;
             this.label3.Text = "Versão 1.0  2017";
             // 
+            // ColunaChamado
+            // 
+            this.ColunaChamado.HeaderText = "Chamado";
+            this.ColunaChamado.Name = "ColunaChamado";
+            this.ColunaChamado.ReadOnly = true;
+            this.ColunaChamado.Width = 80;
+            // 
+            // ColunaDescricao
+            // 
+            this.ColunaDescricao.HeaderText = "Descrição";
+            this.ColunaDescricao.Name = "ColunaDescricao";
+            this.ColunaDescricao.ReadOnly = true;
+            this.ColunaDescricao.Width = 200;
+            // 
+            // colunaIdCliente
+            // 
+            this.colunaIdCliente.HeaderText = "Cliente";
+            this.colunaIdCliente.Name = "colunaIdCliente";
+            this.colunaIdCliente.ReadOnly = true;
+            this.colunaIdCliente.Width = 150;
+            // 
+            // colunastatus
+            // 
+            this.colunastatus.HeaderText = "Status";
+            this.colunastatus.Name = "colunastatus";
+            this.colunastatus.ReadOnly = true;
+            // 
+            // ColunaPrioridade
+            // 
+            this.ColunaPrioridade.HeaderText = "Prioridade";
+            this.ColunaPrioridade.Name = "ColunaPrioridade";
+            this.ColunaPrioridade.ReadOnly = true;
+            // 
+            // colunaReponsavel
+            // 
+            this.colunaReponsavel.HeaderText = "Responsável";
+            this.colunaReponsavel.Name = "colunaReponsavel";
+            this.colunaReponsavel.ReadOnly = true;
+            this.colunaReponsavel.Width = 120;
+            // 
+            // colunaDataAbertura
+            // 
+            this.colunaDataAbertura.HeaderText = "Data Abertura";
+            this.colunaDataAbertura.Name = "colunaDataAbertura";
+            this.colunaDataAbertura.ReadOnly = true;
+            // 
+            // ColunaLoginCriacao
+            // 
+            this.ColunaLoginCriacao.HeaderText = "Criado por";
+            this.ColunaLoginCriacao.Name = "ColunaLoginCriacao";
+            this.ColunaLoginCriacao.ReadOnly = true;
+            this.ColunaLoginCriacao.Width = 120;
+            // 
+            // ColunadataFechamento
+            // 
+            this.ColunadataFechamento.HeaderText = "Data Fechamento";
+            this.ColunadataFechamento.Name = "ColunadataFechamento";
+            this.ColunadataFechamento.ReadOnly = true;
+            this.ColunadataFechamento.Width = 120;
+            // 
             // sistemaAberturaChamado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -494,20 +493,19 @@
         private System.Windows.Forms.Label lblversao;
         private System.Windows.Forms.Button btnNewCliente;
         private System.Windows.Forms.Button btncontacAdm;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colunaDataAbertura;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colunaIdCliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColunaNome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColunaDescricao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colunastatus;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColunaPrioridade;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colunaReponsavel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColunadataFechamento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColunaMeiodecontato;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColunaEmail;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColunaChamado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColunaDescricao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colunaIdCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colunastatus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColunaPrioridade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colunaReponsavel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colunaDataAbertura;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColunaLoginCriacao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColunadataFechamento;
     }
 }
 

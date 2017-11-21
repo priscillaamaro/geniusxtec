@@ -12,9 +12,38 @@ namespace WindowsFormsApp1
 {
     public partial class sistemaAberturaChamado : Form
     {
+        BuscaDeChamados chamados = new BuscaDeChamados();
+
         public sistemaAberturaChamado()
         {
             InitializeComponent();
+
+            configuraDataGrid();
+            populaDataGrid();
+        }
+
+        private void configuraDataGrid()
+        {
+            //populando o dataGrid
+            dataGridChamado.AutoGenerateColumns = false;
+
+            dataGridChamado.Columns[0].DataPropertyName = "id";
+            dataGridChamado.Columns[1].DataPropertyName = "descricao";
+            dataGridChamado.Columns[2].DataPropertyName = "cliente";
+            dataGridChamado.Columns[3].DataPropertyName = "status";
+            dataGridChamado.Columns[4].DataPropertyName = "prioridade";
+            dataGridChamado.Columns[5].DataPropertyName = "usuario_responsavel";
+            dataGridChamado.Columns[6].DataPropertyName = "data_abertura";
+            dataGridChamado.Columns[7].DataPropertyName = "usuario_criacao";
+            dataGridChamado.Columns[8].DataPropertyName = "data_fechamento";
+        }
+
+        private void populaDataGrid()
+        {
+            // Populando os chamados
+            var source = new BindingSource();
+            source.DataSource = chamados.buscar();
+            dataGridChamado.DataSource = source;
         }
 
         private void sistemaAberturaChamado_Load(object sender, EventArgs e)

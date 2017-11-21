@@ -9,7 +9,7 @@ namespace WindowsFormsApp1
 {
     class Conexao
     {
-        private const String StringConexao = "Data Source=DESKTOP-6C2CDM0;Initial Catalog=geniusxtec;Integrated Security=True";
+        private const String StringConexao = "Data Source=PRISCILLA-PC\\SQLEXPRESS;Initial Catalog=geniusxtec;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
         private SqlConnection conexao = new SqlConnection(StringConexao);
 

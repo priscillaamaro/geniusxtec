@@ -51,6 +51,7 @@
     <Compile Include="addUsuario.Designer.cs">
       <DependentUpon>addUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="BuscaDeChamados.cs" />
     <Compile Include="BuscaDeUsuarios.cs" />
     <Compile Include="Chamado.cs" />
     <Compile Include="Cliente.cs" />
