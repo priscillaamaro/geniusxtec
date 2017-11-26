@@ -75,6 +75,12 @@
     <Compile Include="ExcluirUsuario.Designer.cs">
       <DependentUpon>ExcluirUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicial.Designer.cs">
+      <DependentUpon>Inicial.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManutencaoChamado.cs" />
     <Compile Include="ManutencaoDeCliente.cs" />
     <Compile Include="ManutencaoDeUsuarios.cs" />
@@ -123,6 +129,7 @@
       <DependentUpon>relatorios.cs</DependentUpon>
     </Compile>
     <Compile Include="PrioridadeChamado.cs" />
+    <Compile Include="Sessao.cs" />
     <Compile Include="StatusChamado.cs" />
     <Compile Include="TipoUsuario.cs" />
     <Compile Include="Usuario.cs" />
@@ -134,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ExcluirUsuario.resx">
       <DependentUpon>ExcluirUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicial.resx">
+      <DependentUpon>Inicial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>

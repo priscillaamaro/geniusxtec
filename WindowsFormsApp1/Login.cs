@@ -25,11 +25,15 @@ namespace WindowsFormsApp1
 
             BuscaDeUsuarios usuarios = new BuscaDeUsuarios();
 
-            if (usuarios.buscar(loginDigitado, senhaDigitada))
+            Usuario usuarioEncontrado = usuarios.buscar(loginDigitado, senhaDigitada);
+            if (usuarioEncontrado != null)
             {
+                // Guardando usuario autenticado
+                Sessao.usuarioAutenticado = usuarioEncontrado;
+
                 ///Abrindo Principal
-                new sistemaAberturaChamado().Show();
-                
+                new Inicial().Show();
+
                 ///Escondendo Login
                 this.Hide();
             }

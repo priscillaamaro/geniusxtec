@@ -10,16 +10,19 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class sistemaAberturaChamado : Form
+    public partial class Inicial : Form
     {
         BuscaDeChamados chamados = new BuscaDeChamados();
         BuscaDeUsuarios buscaDeUsuarios = new BuscaDeUsuarios();
         ManutencaoChamado manutencaoChamado = new ManutencaoChamado();
 
-        public sistemaAberturaChamado()
+        public Inicial()
         {
             InitializeComponent();
-            descricaoTb.Enabled=false;
+
+            usuarioAutenticado.Text = Sessao.usuarioAutenticado.nome + "  - " + Sessao.usuarioAutenticado.tipoUsuario.descricao;
+
+            descricaoTb.Enabled = false;
             configuraDataGrid();
             populaDataGrid();
 
@@ -34,6 +37,11 @@ namespace WindowsFormsApp1
             this.statusCb.ValueMember = "id";
         }
 
+        private void dataGridChamado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         private void configuraDataGrid()
         {
             //populando o dataGrid
@@ -45,7 +53,7 @@ namespace WindowsFormsApp1
             dataGridChamado.Columns[3].DataPropertyName = "status";
             dataGridChamado.Columns[4].DataPropertyName = "prioridade";
             dataGridChamado.Columns[5].DataPropertyName = "usuario_responsavel";
-            dataGridChamado.Columns[6].DataPropertyName = "data_abertura";
+            dataGridChamado.Columns[6].DataPropertyName = "data_criacao";
             dataGridChamado.Columns[7].DataPropertyName = "usuario_criacao";
             dataGridChamado.Columns[8].DataPropertyName = "data_fechamento";
         }
@@ -56,15 +64,6 @@ namespace WindowsFormsApp1
             var source = new BindingSource();
             source.DataSource = chamados.buscar();
             dataGridChamado.DataSource = source;
-        }
-
-        private void sistemaAberturaChamado_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridChamado_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
         }
 
         private void btnNovoChamado_Click(object sender, EventArgs e)
@@ -125,20 +124,20 @@ namespace WindowsFormsApp1
             Chamado c = (Chamado)dataGridChamado.Rows[index].DataBoundItem;
 
             c.status = (StatusChamado)statusCb.SelectedItem;
-            c.usuario_responsavel = (Usuario) responsavelCb.SelectedItem;
+            c.usuario_responsavel = (Usuario)responsavelCb.SelectedItem;
             c.descricao = descricaoTb.Text;
-            
+
             manutencaoChamado.atualizar(c);
 
             MessageBox.Show("Alterações salvas com sucesso!", "Sucesso", MessageBoxButtons.OK);
-            
+
             populaDataGrid();
         }
 
         private void selecionarChamado(object sender, EventArgs e)
         {
             int index = dataGridChamado.CurrentCell.RowIndex;
-            Chamado c = (Chamado) dataGridChamado.Rows[index].DataBoundItem;
+            Chamado c = (Chamado)dataGridChamado.Rows[index].DataBoundItem;
 
             numeroTb.Text = c.id;
             descricaoTb.Text = c.descricao;

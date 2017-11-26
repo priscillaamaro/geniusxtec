@@ -11,18 +11,29 @@ namespace WindowsFormsApp1
     {
         Conexao con = new Conexao();
 
-        public Boolean buscar(String usuario, String senha)
+        public Usuario buscar(String usuario, String senha)
         {
-            String query = "SELECT * FROM usuario WHERE login = @valorLogin AND senha = @valorSenha";
+            String query = "SELECT u.login, u.senha, u.id_tipo_usuario, u.nome, t.descricao " +
+                " FROM usuario u JOIN tipo_usuario t ON u.id_tipo_usuario=t.id_tipo_usuario " +
+                " WHERE u.status = 1 and login = @valorLogin AND senha = @valorSenha";
 
             List<SqlParameter> parametros = new List<SqlParameter>();
             parametros.Add(new SqlParameter("valorLogin", usuario));
             parametros.Add(new SqlParameter("valorSenha", senha));
 
             List<String[]> resultados = con.busca(query, parametros);
-
-            return resultados.Any();
-        }
+            
+            if (resultados.Any())
+            {
+                Usuario user = new Usuario();
+                user.login = resultados[0][0];
+                user.senha = resultados[0][1];
+                user.tipoUsuario = new TipoUsuario(resultados[0][2], resultados[0][4]);
+                user.nome = resultados[0][3];
+                return user;
+            }else
+                return null;
+            }
 
         public List<Usuario> buscar()
         {
