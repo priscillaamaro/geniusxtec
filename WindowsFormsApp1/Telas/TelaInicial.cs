@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Inicial : Form
+    public partial class TelaInicial : Form
     {
         BuscaDeChamados chamados = new BuscaDeChamados();
         BuscaDeUsuarios buscaDeUsuarios = new BuscaDeUsuarios();
         ManutencaoChamado manutencaoChamado = new ManutencaoChamado();
 
-        public Inicial()
+        public TelaInicial()
         {
             InitializeComponent();
 
@@ -68,7 +68,7 @@ namespace WindowsFormsApp1
 
         private void btnNovoChamado_Click(object sender, EventArgs e)
         {
-            addChamado telaAddChamado = new addChamado(this);
+            AddChamadoTela telaAddChamado = new AddChamadoTela(this);
             telaAddChamado.Show();
         }
 
@@ -79,26 +79,26 @@ namespace WindowsFormsApp1
 
         private void btncriarUsuario_Click(object sender, EventArgs e)
         {
-            addUsuario addusuario = new addUsuario();
+            AddUsuarioTela addusuario = new AddUsuarioTela();
             addusuario.Show();
 
         }
 
         private void btnExcluirUsuario_Click(object sender, EventArgs e)
         {
-            ExcluirUsuario excluirUsuario = new ExcluirUsuario();
+            ExcluirUsuarioTela excluirUsuario = new ExcluirUsuarioTela();
             excluirUsuario.Show();
         }
 
         private void btnrelatorio_Click(object sender, EventArgs e)
         {
-            relatorios relatorios = new relatorios();
+            TelaRelatorios relatorios = new TelaRelatorios();
             relatorios.Show();
         }
 
         private void btnNewCliente_Click(object sender, EventArgs e)
         {
-            addCliente novo = new addCliente();
+            AddClienteTela novo = new AddClienteTela();
             novo.Show();
         }
 

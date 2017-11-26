@@ -26,5 +26,10 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void manualSistema_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

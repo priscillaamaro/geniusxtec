@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class ExcluirUsuario : Form
+    public partial class ExcluirUsuarioTela : Form
     {
         BuscaDeUsuarios usuarios = new BuscaDeUsuarios();
         ManutencaoDeUsuarios manutencao = new ManutencaoDeUsuarios();
 
-        public ExcluirUsuario()
+        public ExcluirUsuarioTela()
 
         {
             InitializeComponent();

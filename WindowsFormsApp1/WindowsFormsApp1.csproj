@@ -45,115 +45,114 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="addUsuario.cs">
+    <Compile Include="Servicos\BuscaDeClientes.cs" />
+    <Compile Include="Telas\AddUsuarioTela.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addUsuario.Designer.cs">
-      <DependentUpon>addUsuario.cs</DependentUpon>
+    <Compile Include="Telas\AddUsuarioTela.Designer.cs">
+      <DependentUpon>AddUsuarioTela.cs</DependentUpon>
     </Compile>
-    <Compile Include="BuscaDeChamados.cs" />
-    <Compile Include="BuscaDeClientes .cs" />
-    <Compile Include="BuscaDeUsuarios.cs" />
-    <Compile Include="Chamado.cs" />
-    <Compile Include="Cliente.cs" />
+    <Compile Include="Servicos\BuscaDeChamados.cs" />
+    <Compile Include="Servicos\BuscaDeUsuarios.cs" />
+    <Compile Include="Entidades\Chamado.cs" />
+    <Compile Include="Entidades\Cliente.cs" />
     <Compile Include="Component1.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Component1.Designer.cs">
       <DependentUpon>Component1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Conexao.cs" />
-    <Compile Include="criarChamado.cs" />
-    <Compile Include="ExcluirCliente.cs">
+    <Compile Include="Servicos\Conexao.cs" />
+    <Compile Include="Telas\ExcluirClienteTela.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ExcluirCliente.Designer.cs">
-      <DependentUpon>ExcluirCliente.cs</DependentUpon>
+    <Compile Include="Telas\ExcluirClienteTela.Designer.cs">
+      <DependentUpon>ExcluirClienteTela.cs</DependentUpon>
     </Compile>
-    <Compile Include="ExcluirUsuario.cs">
+    <Compile Include="Telas\ExcluirUsuarioTela.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ExcluirUsuario.Designer.cs">
-      <DependentUpon>ExcluirUsuario.cs</DependentUpon>
+    <Compile Include="Telas\ExcluirUsuarioTela.Designer.cs">
+      <DependentUpon>ExcluirUsuarioTela.cs</DependentUpon>
     </Compile>
-    <Compile Include="Inicial.cs">
+    <Compile Include="Telas\TelaInicial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Inicial.Designer.cs">
-      <DependentUpon>Inicial.cs</DependentUpon>
+    <Compile Include="Telas\TelaInicial.Designer.cs">
+      <DependentUpon>TelaInicial.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManutencaoChamado.cs" />
-    <Compile Include="ManutencaoDeCliente.cs" />
-    <Compile Include="ManutencaoDeUsuarios.cs" />
-    <Compile Include="Manual.cs">
+    <Compile Include="Servicos\ManutencaoChamado.cs" />
+    <Compile Include="Servicos\ManutencaoDeCliente.cs" />
+    <Compile Include="Servicos\ManutencaoDeUsuarios.cs" />
+    <Compile Include="Telas\TelaManual.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Manual.Designer.cs">
-      <DependentUpon>Manual.cs</DependentUpon>
+    <Compile Include="Telas\TelaManual.Designer.cs">
+      <DependentUpon>TelaManual.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdmsdoSistema.cs">
+    <Compile Include="Telas\AdminsTela.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdmsdoSistema.Designer.cs">
-      <DependentUpon>AdmsdoSistema.cs</DependentUpon>
+    <Compile Include="Telas\AdminsTela.Designer.cs">
+      <DependentUpon>AdminsTela.cs</DependentUpon>
     </Compile>
-    <Compile Include="addChamado.cs">
+    <Compile Include="Telas\AddChamadoTela.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addChamado.Designer.cs">
-      <DependentUpon>addChamado.cs</DependentUpon>
+    <Compile Include="Telas\AddChamadoTela.Designer.cs">
+      <DependentUpon>AddChamadoTela.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="Telas\TelaLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="Telas\TelaLogin.Designer.cs">
+      <DependentUpon>TelaLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="addCliente.cs">
+    <Compile Include="Telas\AddClienteTela.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addCliente.Designer.cs">
-      <DependentUpon>addCliente.cs</DependentUpon>
+    <Compile Include="Telas\AddClienteTela.Designer.cs">
+      <DependentUpon>AddClienteTela.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="relatorios.cs">
+    <Compile Include="Telas\TelaRelatorios.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="relatorios.Designer.cs">
-      <DependentUpon>relatorios.cs</DependentUpon>
+    <Compile Include="Telas\TelaRelatorios.Designer.cs">
+      <DependentUpon>TelaRelatorios.cs</DependentUpon>
     </Compile>
-    <Compile Include="PrioridadeChamado.cs" />
-    <Compile Include="Sessao.cs" />
-    <Compile Include="StatusChamado.cs" />
-    <Compile Include="TipoUsuario.cs" />
-    <Compile Include="Usuario.cs" />
-    <EmbeddedResource Include="addUsuario.resx">
-      <DependentUpon>addUsuario.cs</DependentUpon>
+    <Compile Include="Entidades\PrioridadeChamado.cs" />
+    <Compile Include="Telas\Sessao.cs" />
+    <Compile Include="Entidades\StatusChamado.cs" />
+    <Compile Include="Entidades\TipoUsuario.cs" />
+    <Compile Include="Entidades\Usuario.cs" />
+    <EmbeddedResource Include="Telas\AddUsuarioTela.resx">
+      <DependentUpon>AddUsuarioTela.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ExcluirCliente.resx">
-      <DependentUpon>ExcluirCliente.cs</DependentUpon>
+    <EmbeddedResource Include="Telas\ExcluirClienteTela.resx">
+      <DependentUpon>ExcluirClienteTela.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ExcluirUsuario.resx">
-      <DependentUpon>ExcluirUsuario.cs</DependentUpon>
+    <EmbeddedResource Include="Telas\ExcluirUsuarioTela.resx">
+      <DependentUpon>ExcluirUsuarioTela.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Inicial.resx">
-      <DependentUpon>Inicial.cs</DependentUpon>
+    <EmbeddedResource Include="Telas\TelaInicial.resx">
+      <DependentUpon>TelaInicial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manual.resx">
-      <DependentUpon>Manual.cs</DependentUpon>
+    <EmbeddedResource Include="Telas\TelaManual.resx">
+      <DependentUpon>TelaManual.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdmsdoSistema.resx">
-      <DependentUpon>AdmsdoSistema.cs</DependentUpon>
+    <EmbeddedResource Include="Telas\AdminsTela.resx">
+      <DependentUpon>AdminsTela.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="addChamado.resx">
-      <DependentUpon>addChamado.cs</DependentUpon>
+    <EmbeddedResource Include="Telas\AddChamadoTela.resx">
+      <DependentUpon>AddChamadoTela.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="Telas\TelaLogin.resx">
+      <DependentUpon>TelaLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="addCliente.resx">
-      <DependentUpon>addCliente.cs</DependentUpon>
+    <EmbeddedResource Include="Telas\AddClienteTela.resx">
+      <DependentUpon>AddClienteTela.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -165,8 +164,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="relatorios.resx">
-      <DependentUpon>relatorios.cs</DependentUpon>
+    <EmbeddedResource Include="Telas\TelaRelatorios.resx">
+      <DependentUpon>TelaRelatorios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

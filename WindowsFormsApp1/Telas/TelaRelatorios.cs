@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class relatorios : Form
+    public partial class TelaRelatorios : Form
     {
-        public relatorios()
+        public TelaRelatorios()
         {
             InitializeComponent();
         }

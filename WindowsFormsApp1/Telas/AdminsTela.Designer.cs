@@ -35,8 +35,6 @@
             this.comboADM = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lblemail = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label4 = new System.Windows.Forms.Label();
             this.epADM = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.epADM)).BeginInit();
             this.SuspendLayout();
@@ -46,7 +44,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(-1, 9);
+            this.label1.Location = new System.Drawing.Point(10, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(303, 25);
             this.label1.TabIndex = 0;
@@ -99,26 +97,6 @@
             this.lblemail.Size = new System.Drawing.Size(0, 13);
             this.lblemail.TabIndex = 4;
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(110, 240);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(120, 13);
-            this.linkLabel1.TabIndex = 5;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "www.geniusxtec.com.br";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Navy;
-            this.label4.Location = new System.Drawing.Point(15, 240);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Versão 1.0";
-            // 
             // epADM
             // 
             this.epADM.ContainerControl = this;
@@ -128,9 +106,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(304, 261);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.linkLabel1);
+            this.ClientSize = new System.Drawing.Size(324, 182);
             this.Controls.Add(this.lblemail);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboADM);
@@ -139,7 +115,7 @@
             this.ForeColor = System.Drawing.Color.AliceBlue;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "formcontatarADM";
-            this.Text = "Contactar ADM";
+            this.Text = "Genius X Tec - Administradores do Sistema";
             this.Load += new System.EventHandler(this.formcontatarADM_Load);
             ((System.ComponentModel.ISupportInitialize)(this.epADM)).EndInit();
             this.ResumeLayout(false);
@@ -154,8 +130,6 @@
         private System.Windows.Forms.ComboBox comboADM;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblemail;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ErrorProvider epADM;
     }
 }

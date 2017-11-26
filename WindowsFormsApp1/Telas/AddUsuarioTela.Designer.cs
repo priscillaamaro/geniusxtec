@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class addUsuario
+    partial class AddUsuarioTela
     {
         /// <summary>
         /// Required designer variable.
@@ -42,14 +42,11 @@
             this.txtEmailUser = new System.Windows.Forms.TextBox();
             this.salvarNewUser = new System.Windows.Forms.Button();
             this.limparNewUser = new System.Windows.Forms.Button();
-            this.btnSairNewUser = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtSenhaAdd = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtconfirmSenha = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label7 = new System.Windows.Forms.Label();
             this.epAddUsuario = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNewUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -61,7 +58,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(227, 12);
+            this.label1.Location = new System.Drawing.Point(277, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(191, 20);
             this.label1.TabIndex = 0;
@@ -95,7 +92,7 @@
             this.ColunaLogin,
             this.ColunaTipo,
             this.ColunaNome});
-            this.dataGridViewNewUser.Location = new System.Drawing.Point(-1, 319);
+            this.dataGridViewNewUser.Location = new System.Drawing.Point(10, 319);
             this.dataGridViewNewUser.Name = "dataGridViewNewUser";
             this.dataGridViewNewUser.ReadOnly = true;
             this.dataGridViewNewUser.Size = new System.Drawing.Size(534, 150);
@@ -163,7 +160,7 @@
             // 
             this.salvarNewUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salvarNewUser.ForeColor = System.Drawing.Color.Navy;
-            this.salvarNewUser.Location = new System.Drawing.Point(276, 475);
+            this.salvarNewUser.Location = new System.Drawing.Point(469, 479);
             this.salvarNewUser.Name = "salvarNewUser";
             this.salvarNewUser.Size = new System.Drawing.Size(75, 23);
             this.salvarNewUser.TabIndex = 8;
@@ -175,7 +172,7 @@
             // 
             this.limparNewUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.limparNewUser.ForeColor = System.Drawing.Color.Navy;
-            this.limparNewUser.Location = new System.Drawing.Point(368, 475);
+            this.limparNewUser.Location = new System.Drawing.Point(368, 479);
             this.limparNewUser.Name = "limparNewUser";
             this.limparNewUser.Size = new System.Drawing.Size(75, 23);
             this.limparNewUser.TabIndex = 9;
@@ -183,22 +180,10 @@
             this.limparNewUser.UseVisualStyleBackColor = true;
             this.limparNewUser.Click += new System.EventHandler(this.limparNewUser_Click);
             // 
-            // btnSairNewUser
-            // 
-            this.btnSairNewUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSairNewUser.ForeColor = System.Drawing.Color.Navy;
-            this.btnSairNewUser.Location = new System.Drawing.Point(458, 475);
-            this.btnSairNewUser.Name = "btnSairNewUser";
-            this.btnSairNewUser.Size = new System.Drawing.Size(75, 23);
-            this.btnSairNewUser.TabIndex = 10;
-            this.btnSairNewUser.Text = "Sair";
-            this.btnSairNewUser.UseVisualStyleBackColor = true;
-            this.btnSairNewUser.Click += new System.EventHandler(this.btnSairNewUser_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.Geniu_imagebaixa100;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(148, 70);
             this.pictureBox1.TabIndex = 11;
@@ -242,26 +227,6 @@
             this.label6.TabIndex = 14;
             this.label6.Text = "Confirmar senha";
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(12, 505);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(55, 13);
-            this.linkLabel1.TabIndex = 16;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "linkLabel1";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.Navy;
-            this.label7.Location = new System.Drawing.Point(12, 76);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 13);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Versão 1.0";
-            // 
             // epAddUsuario
             // 
             this.epAddUsuario.ContainerControl = this;
@@ -271,15 +236,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(545, 523);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.linkLabel1);
+            this.ClientSize = new System.Drawing.Size(552, 510);
             this.Controls.Add(this.txtconfirmSenha);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtSenhaAdd);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.btnSairNewUser);
             this.Controls.Add(this.limparNewUser);
             this.Controls.Add(this.salvarNewUser);
             this.Controls.Add(this.txtEmailUser);
@@ -291,7 +253,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "addUsuario";
-            this.Text = "addUsuario";
+            this.Text = "Genius X Tec -  Novo Usuario";
             this.Load += new System.EventHandler(this.addUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewNewUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -313,14 +275,11 @@
         private System.Windows.Forms.TextBox txtEmailUser;
         private System.Windows.Forms.Button salvarNewUser;
         private System.Windows.Forms.Button limparNewUser;
-        private System.Windows.Forms.Button btnSairNewUser;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtSenhaAdd;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtconfirmSenha;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ErrorProvider epAddUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColunaLogin;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColunaTipo;

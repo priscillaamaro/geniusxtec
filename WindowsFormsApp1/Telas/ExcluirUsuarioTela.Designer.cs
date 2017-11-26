@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class ExcluirUsuario
+    partial class ExcluirUsuarioTela
     {
         /// <summary>
         /// Required designer variable.
@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcluirUsuario));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcluirUsuarioTela));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridExcluir = new System.Windows.Forms.DataGridView();
-            this.btnExcluUser = new System.Windows.Forms.Button();
             this.colunaIdCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colunaNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColunaEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnExcluUser = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridExcluir)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +54,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(278, 35);
+            this.label1.Location = new System.Drawing.Point(330, 38);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(172, 25);
             this.label1.TabIndex = 2;
@@ -74,18 +74,6 @@
             this.dataGridExcluir.ReadOnly = true;
             this.dataGridExcluir.Size = new System.Drawing.Size(631, 150);
             this.dataGridExcluir.TabIndex = 3;
-            // 
-            // btnExcluUser
-            // 
-            this.btnExcluUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluUser.ForeColor = System.Drawing.Color.Navy;
-            this.btnExcluUser.Location = new System.Drawing.Point(514, 283);
-            this.btnExcluUser.Name = "btnExcluUser";
-            this.btnExcluUser.Size = new System.Drawing.Size(115, 23);
-            this.btnExcluUser.TabIndex = 4;
-            this.btnExcluUser.Text = "Excluir";
-            this.btnExcluUser.UseVisualStyleBackColor = true;
-            this.btnExcluUser.Click += new System.EventHandler(this.btnExcluUser_Click);
             // 
             // colunaIdCliente
             // 
@@ -108,6 +96,18 @@
             this.ColunaEmail.ReadOnly = true;
             this.ColunaEmail.Width = 230;
             // 
+            // btnExcluUser
+            // 
+            this.btnExcluUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluUser.ForeColor = System.Drawing.Color.Navy;
+            this.btnExcluUser.Location = new System.Drawing.Point(528, 283);
+            this.btnExcluUser.Name = "btnExcluUser";
+            this.btnExcluUser.Size = new System.Drawing.Size(115, 23);
+            this.btnExcluUser.TabIndex = 4;
+            this.btnExcluUser.Text = "Excluir";
+            this.btnExcluUser.UseVisualStyleBackColor = true;
+            this.btnExcluUser.Click += new System.EventHandler(this.btnExcluUser_Click);
+            // 
             // ExcluirUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -120,7 +120,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ExcluirUsuario";
-            this.Text = "ExcluirUsuario";
+            this.Text = "Genius X Tec - Excluir Usuario";
             this.Load += new System.EventHandler(this.ExcluirUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridExcluir)).EndInit();

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Login : Form
+    public partial class TelaLogin : Form
     {
-        public Login()
+        public TelaLogin()
         {
             InitializeComponent();
         }
@@ -32,7 +32,7 @@ namespace WindowsFormsApp1
                 Sessao.usuarioAutenticado = usuarioEncontrado;
 
                 ///Abrindo Principal
-                new Inicial().Show();
+                new TelaInicial().Show();
 
                 ///Escondendo Login
                 this.Hide();

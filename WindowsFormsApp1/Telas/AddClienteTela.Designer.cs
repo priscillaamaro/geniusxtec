@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class addCliente
+    partial class AddClienteTela
     {
         /// <summary>
         /// Required designer variable.
@@ -40,12 +40,8 @@
             this.txtTelefone = new System.Windows.Forms.TextBox();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.sairNewCli = new System.Windows.Forms.Button();
             this.btnNewCli = new System.Windows.Forms.Button();
             this.limparCamposNewCli = new System.Windows.Forms.Button();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.epNovoCliente = new System.Windows.Forms.ErrorProvider(this.components);
             this.comboUsuario = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -57,7 +53,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(267, 21);
+            this.label1.Location = new System.Drawing.Point(253, 34);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(147, 25);
             this.label1.TabIndex = 0;
@@ -184,22 +180,11 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // sairNewCli
-            // 
-            this.sairNewCli.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sairNewCli.ForeColor = System.Drawing.Color.Navy;
-            this.sairNewCli.Location = new System.Drawing.Point(352, 407);
-            this.sairNewCli.Name = "sairNewCli";
-            this.sairNewCli.Size = new System.Drawing.Size(84, 35);
-            this.sairNewCli.TabIndex = 12;
-            this.sairNewCli.Text = "&Sair";
-            this.sairNewCli.UseVisualStyleBackColor = true;
-            // 
             // btnNewCli
             // 
             this.btnNewCli.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNewCli.ForeColor = System.Drawing.Color.Navy;
-            this.btnNewCli.Location = new System.Drawing.Point(52, 407);
+            this.btnNewCli.Location = new System.Drawing.Point(370, 385);
             this.btnNewCli.Name = "btnNewCli";
             this.btnNewCli.Size = new System.Drawing.Size(84, 35);
             this.btnNewCli.TabIndex = 13;
@@ -211,43 +196,13 @@
             // 
             this.limparCamposNewCli.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.limparCamposNewCli.ForeColor = System.Drawing.Color.Navy;
-            this.limparCamposNewCli.Location = new System.Drawing.Point(200, 407);
+            this.limparCamposNewCli.Location = new System.Drawing.Point(258, 385);
             this.limparCamposNewCli.Name = "limparCamposNewCli";
             this.limparCamposNewCli.Size = new System.Drawing.Size(84, 35);
             this.limparCamposNewCli.TabIndex = 14;
             this.limparCamposNewCli.Text = "&Limpar";
             this.limparCamposNewCli.UseVisualStyleBackColor = true;
             this.limparCamposNewCli.Click += new System.EventHandler(this.limparCamposNewCli_Click);
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(13, 493);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(108, 13);
-            this.linkLabel1.TabIndex = 15;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "www.geniusxtec.com";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.Navy;
-            this.label4.Location = new System.Drawing.Point(173, 493);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 13);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Contatar ADM.";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.Navy;
-            this.label6.Location = new System.Drawing.Point(320, 493);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 13);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "Fale conosco";
             // 
             // epNovoCliente
             // 
@@ -266,14 +221,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(508, 511);
+            this.ClientSize = new System.Drawing.Size(468, 427);
             this.Controls.Add(this.comboUsuario);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.limparCamposNewCli);
             this.Controls.Add(this.btnNewCli);
-            this.Controls.Add(this.sairNewCli);
             this.Controls.Add(this.txtEndereco);
             this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.label2);
@@ -286,7 +237,7 @@
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label1);
             this.Name = "addCliente";
-            this.Text = "novoCliente";
+            this.Text = "Genius X Tec - Novo Cliente";
             this.Load += new System.EventHandler(this.addCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.epNovoCliente)).EndInit();
@@ -308,12 +259,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.TextBox txtEndereco;
-        private System.Windows.Forms.Button sairNewCli;
         private System.Windows.Forms.Button btnNewCli;
         private System.Windows.Forms.Button limparCamposNewCli;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ErrorProvider epNovoCliente;
         private System.Windows.Forms.ComboBox comboUsuario;
     }

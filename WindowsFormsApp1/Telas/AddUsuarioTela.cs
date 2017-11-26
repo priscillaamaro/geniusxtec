@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class addUsuario : Form
+    public partial class AddUsuarioTela : Form
     {
         BuscaDeUsuarios usuarios = new BuscaDeUsuarios();
 
-        public addUsuario()
+        public AddUsuarioTela()
         {
             InitializeComponent();
 

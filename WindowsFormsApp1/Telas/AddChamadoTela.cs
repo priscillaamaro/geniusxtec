@@ -7,19 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.Servicos;
 
 namespace WindowsFormsApp1
 {
-    public partial class addChamado : Form
+    public partial class AddChamadoTela : Form
     {
         BuscaDeChamados chamados = new BuscaDeChamados();
         BuscaDeClientes buscaDeClientes = new BuscaDeClientes();
         BuscaDeUsuarios buscaDeUsuarios = new BuscaDeUsuarios();
         ManutencaoChamado manutencaoChamado = new ManutencaoChamado();
 
-        Inicial inicial;
+        TelaInicial inicial;
 
-        public addChamado(Inicial inicial)
+        public AddChamadoTela(TelaInicial inicial)
         {
             InitializeComponent();
 

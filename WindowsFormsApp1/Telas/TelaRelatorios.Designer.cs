@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class relatorios
+    partial class TelaRelatorios
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // relatorios
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "relatorios";
+            this.ClientSize = new System.Drawing.Size(292, 273);
+            this.Name = "relatorios";
+            this.Text = "Genius X Tec - Relatorios";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

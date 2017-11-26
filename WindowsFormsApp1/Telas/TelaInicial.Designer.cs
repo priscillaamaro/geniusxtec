@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class Inicial
+    partial class TelaInicial
     {
         /// <summary>
         /// Required designer variable.
@@ -606,7 +606,7 @@
             this.Controls.Add(this.btncriarUsuario);
             this.Controls.Add(this.btnNovoChamado);
             this.Name = "Inicial";
-            this.Text = "Inicial";
+            this.Text = "Genius X Tec - Gerenciamento de Chamados";
             this.Load += new System.EventHandler(this.Inicial_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureGenius)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridChamado)).EndInit();

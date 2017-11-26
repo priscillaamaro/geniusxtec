@@ -17,3 +17,22 @@ D:\Imagens\2010\Programas faculdade\C#\sistema de abertura de chamados\WindowsFo
 D:\Imagens\2010\Programas faculdade\C#\sistema de abertura de chamados\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.relatorios.resources
 D:\Imagens\2010\Programas faculdade\C#\sistema de abertura de chamados\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.addChamado.resources
 D:\Imagens\2010\Programas faculdade\C#\sistema de abertura de chamados\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.addCliente.resources
+C:\Users\Gustavo\Desktop\geniusxtec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojResolveAssemblyReference.cache
+C:\Users\Gustavo\Desktop\geniusxtec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.AddUsuarioTela.resources
+C:\Users\Gustavo\Desktop\geniusxtec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.excluirCli.resources
+C:\Users\Gustavo\Desktop\geniusxtec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ExcluirUsuarioTela.resources
+C:\Users\Gustavo\Desktop\geniusxtec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.TelaInicial.resources
+C:\Users\Gustavo\Desktop\geniusxtec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.manualSistema.resources
+C:\Users\Gustavo\Desktop\geniusxtec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.formcontatarADM.resources
+C:\Users\Gustavo\Desktop\geniusxtec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.AddChamadoTela.resources
+C:\Users\Gustavo\Desktop\geniusxtec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.TelaLogin.resources
+C:\Users\Gustavo\Desktop\geniusxtec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.AddClienteTela.resources
+C:\Users\Gustavo\Desktop\geniusxtec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\Gustavo\Desktop\geniusxtec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.TelaRelatorios.resources
+C:\Users\Gustavo\Desktop\geniusxtec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.Cache
+C:\Users\Gustavo\Desktop\geniusxtec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\Gustavo\Desktop\geniusxtec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\Gustavo\Desktop\geniusxtec\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\Gustavo\Desktop\geniusxtec\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\Gustavo\Desktop\geniusxtec\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\Gustavo\Desktop\geniusxtec\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
