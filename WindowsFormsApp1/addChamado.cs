@@ -12,9 +12,33 @@ namespace WindowsFormsApp1
 {
     public partial class addChamado : Form
     {
-        public addChamado()
+        BuscaDeChamados chamados = new BuscaDeChamados();
+        BuscaDeClientes buscaDeClientes = new BuscaDeClientes();
+        BuscaDeUsuarios buscaDeUsuarios = new BuscaDeUsuarios();
+        ManutencaoChamado manutencaoChamado = new ManutencaoChamado();
+
+        Inicial inicial;
+
+        public addChamado(Inicial inicial)
         {
             InitializeComponent();
+
+            this.inicial = inicial;
+
+            var clientes = buscaDeClientes.buscar();
+            this.cbClientes.DataSource = clientes;
+            this.cbClientes.DisplayMember = "nome";
+            this.cbClientes.ValueMember = "id";
+
+            var usuarios = buscaDeUsuarios.buscarComTipo();
+            this.cbResponsavel.DataSource = usuarios;
+            this.cbResponsavel.DisplayMember = "nome";
+            this.cbResponsavel.ValueMember = "login";
+
+            var prioridades = chamados.buscarPrioridades();
+            this.cbPrioridade.DataSource = prioridades;
+            this.cbPrioridade.DisplayMember = "descricao";
+            this.cbPrioridade.ValueMember = "id";
         }
              
         
@@ -25,10 +49,10 @@ namespace WindowsFormsApp1
         }
         private void btnLimparNew_Click(object sender, EventArgs e)
         {
-            //addCliChamado.Clear();
+            cbClientes.ResetText();
             descrever.Clear();
-            addPrioridade.ResetText();
-            //addCliChamado.Focus();
+            cbPrioridade.ResetText();
+            cbResponsavel.ResetText();
         }
 
         private void sair_Click(object sender, EventArgs e)
@@ -43,26 +67,44 @@ namespace WindowsFormsApp1
 
         private void btnSalvarnew_Click(object sender, EventArgs e)
         {
-            //if (addCliChamado.Text.Equals(""))
-            //{
-            //    epAddChamado.SetError(addCliChamado, "Nome do clienteo obrigatório");
-            //    addCliChamado.Focus();
-            //}
-            if (addPrioridade.Text.Equals(""))
+            if (cbClientes.Text.Equals(""))
             {
-                epAddChamado.SetError(addPrioridade, "Nome do clienteo obrigatório");
-                addPrioridade.Focus();
+                epAddChamado.SetError(cbClientes, "Cliente obrigatório");
+                cbClientes.Focus();
             }
-            if (cbMeioContato.Text.Equals(""))
+            if (cbPrioridade.Text.Equals(""))
             {
-                epAddChamado.SetError(cbMeioContato, "Nome do clienteo obrigatório");
-                cbMeioContato.Focus();
+                epAddChamado.SetError(cbPrioridade, "Prioridade obrigatória");
+                cbPrioridade.Focus();
+            }
+            if (cbResponsavel.Text.Equals(""))
+            {
+                epAddChamado.SetError(cbResponsavel, "Responsável obrigatório");
+                cbResponsavel.Focus();
             }
             if (descrever.Text.Equals(""))
             {
-                epAddChamado.SetError(descrever, "Nome do clienteo obrigatório");
+                epAddChamado.SetError(descrever, "Descrição obrigatória");
                 descrever.Focus();
             }
+
+            Chamado novoChamado = new Chamado();
+            novoChamado.cliente = (Cliente)cbClientes.SelectedItem;
+            novoChamado.usuario_responsavel = (Usuario) cbResponsavel.SelectedItem;
+            novoChamado.prioridade = (PrioridadeChamado) cbPrioridade.SelectedItem;
+            novoChamado.descricao = descrever.Text;
+
+            novoChamado.usuario_criacao = Sessao.usuarioAutenticado;
+
+            manutencaoChamado.salvar(novoChamado);
+
+            btnLimparNew_Click(null, null);
+
+            inicial.populaDataGrid();
+        }
+
+        private void cbMeioContato_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

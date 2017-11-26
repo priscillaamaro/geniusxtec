@@ -58,7 +58,7 @@ namespace WindowsFormsApp1
             dataGridChamado.Columns[8].DataPropertyName = "data_fechamento";
         }
 
-        private void populaDataGrid()
+        public void populaDataGrid()
         {
             // Populando os chamados
             var source = new BindingSource();
@@ -68,7 +68,7 @@ namespace WindowsFormsApp1
 
         private void btnNovoChamado_Click(object sender, EventArgs e)
         {
-            addChamado telaAddChamado = new addChamado();
+            addChamado telaAddChamado = new addChamado(this);
             telaAddChamado.Show();
         }
 
@@ -155,6 +155,11 @@ namespace WindowsFormsApp1
             descricaoTb.Enabled = true;
             statusCb.Enabled = true;
             responsavelCb.Enabled = true;
+        }
+
+        private void Inicial_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(addChamado));
             this.label1 = new System.Windows.Forms.Label();
-            this.addPrioridade = new System.Windows.Forms.ComboBox();
+            this.cbPrioridade = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.descrever = new System.Windows.Forms.TextBox();
@@ -42,13 +42,13 @@
             this.label7 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cbMeioContato = new System.Windows.Forms.ComboBox();
+            this.responsavelLabel = new System.Windows.Forms.Label();
+            this.cbResponsavel = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.epAddChamado = new System.Windows.Forms.ErrorProvider(this.components);
             this.component11 = new WindowsFormsApp1.Component1(this.components);
-            this.CBAddChamado = new System.Windows.Forms.ComboBox();
+            this.cbClientes = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epAddChamado)).BeginInit();
             this.SuspendLayout();
@@ -65,13 +65,13 @@
             this.label1.Text = "Adicionar novo chamado Chamado";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // addPrioridade
+            // cbPrioridade
             // 
-            this.addPrioridade.FormattingEnabled = true;
-            this.addPrioridade.Location = new System.Drawing.Point(135, 192);
-            this.addPrioridade.Name = "addPrioridade";
-            this.addPrioridade.Size = new System.Drawing.Size(165, 21);
-            this.addPrioridade.TabIndex = 2;
+            this.cbPrioridade.FormattingEnabled = true;
+            this.cbPrioridade.Location = new System.Drawing.Point(135, 192);
+            this.cbPrioridade.Name = "cbPrioridade";
+            this.cbPrioridade.Size = new System.Drawing.Size(165, 21);
+            this.cbPrioridade.TabIndex = 2;
             // 
             // label2
             // 
@@ -179,24 +179,25 @@
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
-            // label3
+            // responsavelLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(12, 242);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 13);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Meio de Contato";
+            this.responsavelLabel.AutoSize = true;
+            this.responsavelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.responsavelLabel.ForeColor = System.Drawing.Color.Navy;
+            this.responsavelLabel.Location = new System.Drawing.Point(12, 242);
+            this.responsavelLabel.Name = "responsavelLabel";
+            this.responsavelLabel.Size = new System.Drawing.Size(80, 13);
+            this.responsavelLabel.TabIndex = 17;
+            this.responsavelLabel.Text = "Responsável";
             // 
-            // cbMeioContato
+            // cbResponsavel
             // 
-            this.cbMeioContato.FormattingEnabled = true;
-            this.cbMeioContato.Location = new System.Drawing.Point(135, 234);
-            this.cbMeioContato.Name = "cbMeioContato";
-            this.cbMeioContato.Size = new System.Drawing.Size(165, 21);
-            this.cbMeioContato.TabIndex = 18;
+            this.cbResponsavel.FormattingEnabled = true;
+            this.cbResponsavel.Location = new System.Drawing.Point(135, 234);
+            this.cbResponsavel.Name = "cbResponsavel";
+            this.cbResponsavel.Size = new System.Drawing.Size(165, 21);
+            this.cbResponsavel.TabIndex = 18;
+            this.cbResponsavel.SelectedIndexChanged += new System.EventHandler(this.cbMeioContato_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -222,13 +223,13 @@
             // 
             this.epAddChamado.ContainerControl = this;
             // 
-            // CBAddChamado
+            // cbClientes
             // 
-            this.CBAddChamado.FormattingEnabled = true;
-            this.CBAddChamado.Location = new System.Drawing.Point(135, 144);
-            this.CBAddChamado.Name = "CBAddChamado";
-            this.CBAddChamado.Size = new System.Drawing.Size(165, 21);
-            this.CBAddChamado.TabIndex = 21;
+            this.cbClientes.FormattingEnabled = true;
+            this.cbClientes.Location = new System.Drawing.Point(135, 144);
+            this.cbClientes.Name = "cbClientes";
+            this.cbClientes.Size = new System.Drawing.Size(165, 21);
+            this.cbClientes.TabIndex = 21;
             // 
             // addChamado
             // 
@@ -236,11 +237,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(670, 378);
-            this.Controls.Add(this.CBAddChamado);
+            this.Controls.Add(this.cbClientes);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.cbMeioContato);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.cbResponsavel);
+            this.Controls.Add(this.responsavelLabel);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label7);
@@ -251,7 +252,7 @@
             this.Controls.Add(this.descrever);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.addPrioridade);
+            this.Controls.Add(this.cbPrioridade);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "addChamado";
@@ -267,7 +268,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox addPrioridade;
+        private System.Windows.Forms.ComboBox cbPrioridade;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox descrever;
@@ -278,12 +279,12 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cbMeioContato;
+        private System.Windows.Forms.Label responsavelLabel;
+        private System.Windows.Forms.ComboBox cbResponsavel;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ErrorProvider epAddChamado;
-        private System.Windows.Forms.ComboBox CBAddChamado;
+        private System.Windows.Forms.ComboBox cbClientes;
         private Component1 component11;
     }
 }

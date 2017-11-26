@@ -52,6 +52,7 @@
       <DependentUpon>addUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="BuscaDeChamados.cs" />
+    <Compile Include="BuscaDeClientes .cs" />
     <Compile Include="BuscaDeUsuarios.cs" />
     <Compile Include="Chamado.cs" />
     <Compile Include="Cliente.cs" />
@@ -84,12 +85,6 @@
     <Compile Include="ManutencaoChamado.cs" />
     <Compile Include="ManutencaoDeCliente.cs" />
     <Compile Include="ManutencaoDeUsuarios.cs" />
-    <Compile Include="Principal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Principal.Designer.cs">
-      <DependentUpon>Principal.cs</DependentUpon>
-    </Compile>
     <Compile Include="Manual.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,9 +139,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inicial.resx">
       <DependentUpon>Inicial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Principal.resx">
-      <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manual.resx">
       <DependentUpon>Manual.cs</DependentUpon>

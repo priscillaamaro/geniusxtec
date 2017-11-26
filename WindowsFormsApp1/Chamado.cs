@@ -26,5 +26,10 @@ namespace WindowsFormsApp1
         public Usuario usuario_criacao { get; set; }
         public Usuario usuario_responsavel { get; set; }
 
+        public Chamado()
+        {
+            status = new StatusChamado("1", "Aberto");
+            data_criacao = String.Format("{0:dd/MM/yyyy HH:mm:ss}", DateTime.Now);
+        }
     }
 }

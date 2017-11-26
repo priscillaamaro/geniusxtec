@@ -55,5 +55,20 @@ namespace WindowsFormsApp1
             }
             return status;
         }
+
+        public List<PrioridadeChamado> buscarPrioridades()
+        {
+            String query = "SELECT * FROM prioridade_chamado";
+
+            List<PrioridadeChamado> prioridades = new List<PrioridadeChamado>();
+            foreach (String[] resultado in con.busca(query))
+            {
+                PrioridadeChamado p = new PrioridadeChamado();
+                p.id = resultado[0];
+                p.descricao = resultado[1];
+                prioridades.Add(p);
+            }
+            return prioridades;
+        }
     }
 }

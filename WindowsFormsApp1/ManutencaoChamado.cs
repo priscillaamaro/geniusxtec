@@ -39,7 +39,19 @@ namespace WindowsFormsApp1
 
         public void salvar(Chamado chamado)
         {
-            String sql = "INSERT INTO chamado VALUES (@descricao, @valorSenha, @valorTipo, @valorNome)";
+            String sql = "INSERT INTO chamado " +
+                " (descricao, id_cliente, id_status_chamado, id_prioridade_chamado, data_criacao, login_criacao, login_responsavel) " +
+                " VALUES " +
+                " (@valorDescricao, @valorIdCliente, 1, @valorIdPrioridade, SYSDATETIME(), @valorLoginCriacao, @valorLoginResponsavel)";
+
+            List<SqlParameter> parametros = new List<SqlParameter>();
+            parametros.Add(new SqlParameter("valorDescricao", chamado.descricao));
+            parametros.Add(new SqlParameter("valorIdCliente", chamado.cliente.id));
+            parametros.Add(new SqlParameter("valorIdPrioridade", chamado.prioridade.id));
+            parametros.Add(new SqlParameter("valorLoginCriacao", chamado.usuario_criacao.login));
+            parametros.Add(new SqlParameter("valorLoginResponsavel", chamado.usuario_responsavel.login));
+            
+            con.executar(sql, parametros);
         }
     }
 }

@@ -82,14 +82,16 @@
             // 
             // usuarioAutenticado
             // 
-            this.usuarioAutenticado.AutoSize = true;
+            this.usuarioAutenticado.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.usuarioAutenticado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usuarioAutenticado.Location = new System.Drawing.Point(1057, 12);
+            this.usuarioAutenticado.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.usuarioAutenticado.Location = new System.Drawing.Point(886, 12);
             this.usuarioAutenticado.Name = "usuarioAutenticado";
             this.usuarioAutenticado.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.usuarioAutenticado.Size = new System.Drawing.Size(99, 15);
+            this.usuarioAutenticado.Size = new System.Drawing.Size(270, 15);
             this.usuarioAutenticado.TabIndex = 55;
-            this.usuarioAutenticado.Text = "Usuario (Tipo)";
+            this.usuarioAutenticado.Text = "Usuario - Tipos";
+            this.usuarioAutenticado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btncontacAdm
             // 
@@ -605,6 +607,7 @@
             this.Controls.Add(this.btnNovoChamado);
             this.Name = "Inicial";
             this.Text = "Inicial";
+            this.Load += new System.EventHandler(this.Inicial_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureGenius)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridChamado)).EndInit();
             this.ResumeLayout(false);
