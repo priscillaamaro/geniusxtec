@@ -29,17 +29,26 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(sistemaAberturaChamado));
-            this.lbl1 = new System.Windows.Forms.Label();
+            this.clienteLabel = new System.Windows.Forms.Label();
             this.lbl2 = new System.Windows.Forms.Label();
             this.lbl3 = new System.Windows.Forms.Label();
             this.lblnome = new System.Windows.Forms.Label();
             this.lblDes = new System.Windows.Forms.Label();
             this.btnNovoChamado = new System.Windows.Forms.Button();
-            this.btnEditardesc = new System.Windows.Forms.Button();
+            this.btnEditarChamado = new System.Windows.Forms.Button();
             this.btnSalvarAltr = new System.Windows.Forms.Button();
             this.btncriarUsuario = new System.Windows.Forms.Button();
             this.dataGridChamado = new System.Windows.Forms.DataGridView();
-            this.txtDescChamado = new System.Windows.Forms.TextBox();
+            this.ColunaChamado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColunaDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colunaIdCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colunastatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColunaPrioridade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colunaReponsavel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colunaDataAbertura = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColunaLoginCriacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColunadataFechamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descricaoTb = new System.Windows.Forms.TextBox();
             this.lblStatus = new System.Windows.Forms.Label();
             this.lblRespons = new System.Windows.Forms.Label();
             this.btnExcluirUsuario = new System.Windows.Forms.Button();
@@ -55,36 +64,40 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.ColunaChamado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColunaDescricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colunaIdCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colunastatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColunaPrioridade = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colunaReponsavel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colunaDataAbertura = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColunaLoginCriacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColunadataFechamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeroLabel = new System.Windows.Forms.Label();
+            this.dataCriacaoLabel = new System.Windows.Forms.Label();
+            this.prioridadeLabel = new System.Windows.Forms.Label();
+            this.dataFechamentoLabel = new System.Windows.Forms.Label();
+            this.abertoPorLabel = new System.Windows.Forms.Label();
+            this.numeroTb = new System.Windows.Forms.TextBox();
+            this.dataFechamentoTb = new System.Windows.Forms.TextBox();
+            this.clienteTb = new System.Windows.Forms.TextBox();
+            this.abertoPorTb = new System.Windows.Forms.TextBox();
+            this.dataCriacaoTb = new System.Windows.Forms.TextBox();
+            this.responsavelCb = new System.Windows.Forms.ComboBox();
+            this.statusCb = new System.Windows.Forms.ComboBox();
+            this.prioridadeTb = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridChamado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureGenius)).BeginInit();
             this.SuspendLayout();
             // 
-            // lbl1
+            // clienteLabel
             // 
-            this.lbl1.AutoSize = true;
-            this.lbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl1.ForeColor = System.Drawing.Color.Navy;
-            this.lbl1.Location = new System.Drawing.Point(9, 616);
-            this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(43, 13);
-            this.lbl1.TabIndex = 0;
-            this.lbl1.Text = "Nome:";
+            this.clienteLabel.AutoSize = true;
+            this.clienteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clienteLabel.ForeColor = System.Drawing.Color.Navy;
+            this.clienteLabel.Location = new System.Drawing.Point(12, 657);
+            this.clienteLabel.Name = "clienteLabel";
+            this.clienteLabel.Size = new System.Drawing.Size(50, 13);
+            this.clienteLabel.TabIndex = 0;
+            this.clienteLabel.Text = "Cliente:";
             // 
             // lbl2
             // 
             this.lbl2.AutoSize = true;
             this.lbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl2.ForeColor = System.Drawing.Color.Navy;
-            this.lbl2.Location = new System.Drawing.Point(9, 651);
+            this.lbl2.Location = new System.Drawing.Point(12, 689);
             this.lbl2.Name = "lbl2";
             this.lbl2.Size = new System.Drawing.Size(47, 13);
             this.lbl2.TabIndex = 1;
@@ -95,7 +108,7 @@
             this.lbl3.AutoSize = true;
             this.lbl3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl3.ForeColor = System.Drawing.Color.Navy;
-            this.lbl3.Location = new System.Drawing.Point(9, 689);
+            this.lbl3.Location = new System.Drawing.Point(309, 657);
             this.lbl3.Name = "lbl3";
             this.lbl3.Size = new System.Drawing.Size(84, 13);
             this.lbl3.TabIndex = 2;
@@ -133,22 +146,23 @@
             this.btnNovoChamado.UseVisualStyleBackColor = true;
             this.btnNovoChamado.Click += new System.EventHandler(this.btnNovoChamado_Click);
             // 
-            // btnEditardesc
+            // btnEditarChamado
             // 
-            this.btnEditardesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditardesc.ForeColor = System.Drawing.Color.Navy;
-            this.btnEditardesc.Location = new System.Drawing.Point(781, 623);
-            this.btnEditardesc.Name = "btnEditardesc";
-            this.btnEditardesc.Size = new System.Drawing.Size(121, 33);
-            this.btnEditardesc.TabIndex = 6;
-            this.btnEditardesc.Text = "&Editar Descrição";
-            this.btnEditardesc.UseVisualStyleBackColor = true;
+            this.btnEditarChamado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarChamado.ForeColor = System.Drawing.Color.Navy;
+            this.btnEditarChamado.Location = new System.Drawing.Point(908, 623);
+            this.btnEditarChamado.Name = "btnEditarChamado";
+            this.btnEditarChamado.Size = new System.Drawing.Size(121, 33);
+            this.btnEditarChamado.TabIndex = 6;
+            this.btnEditarChamado.Text = "&Editar Chamado";
+            this.btnEditarChamado.UseVisualStyleBackColor = true;
+            this.btnEditarChamado.Click += new System.EventHandler(this.btnEditarChamado_Click);
             // 
             // btnSalvarAltr
             // 
             this.btnSalvarAltr.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvarAltr.ForeColor = System.Drawing.Color.Navy;
-            this.btnSalvarAltr.Location = new System.Drawing.Point(908, 621);
+            this.btnSalvarAltr.Location = new System.Drawing.Point(1035, 621);
             this.btnSalvarAltr.Name = "btnSalvarAltr";
             this.btnSalvarAltr.Size = new System.Drawing.Size(121, 35);
             this.btnSalvarAltr.TabIndex = 7;
@@ -192,14 +206,76 @@
             this.dataGridChamado.Size = new System.Drawing.Size(1144, 345);
             this.dataGridChamado.TabIndex = 9;
             this.dataGridChamado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridChamado_CellContentClick);
+            this.dataGridChamado.SelectionChanged += new System.EventHandler(this.selecionarChamado);
             // 
-            // txtDescChamado
+            // ColunaChamado
             // 
-            this.txtDescChamado.Location = new System.Drawing.Point(12, 529);
-            this.txtDescChamado.Multiline = true;
-            this.txtDescChamado.Name = "txtDescChamado";
-            this.txtDescChamado.Size = new System.Drawing.Size(1144, 86);
-            this.txtDescChamado.TabIndex = 11;
+            this.ColunaChamado.HeaderText = "Chamado";
+            this.ColunaChamado.Name = "ColunaChamado";
+            this.ColunaChamado.ReadOnly = true;
+            this.ColunaChamado.Width = 80;
+            // 
+            // ColunaDescricao
+            // 
+            this.ColunaDescricao.HeaderText = "Descrição";
+            this.ColunaDescricao.Name = "ColunaDescricao";
+            this.ColunaDescricao.ReadOnly = true;
+            this.ColunaDescricao.Width = 200;
+            // 
+            // colunaIdCliente
+            // 
+            this.colunaIdCliente.HeaderText = "Cliente";
+            this.colunaIdCliente.Name = "colunaIdCliente";
+            this.colunaIdCliente.ReadOnly = true;
+            this.colunaIdCliente.Width = 150;
+            // 
+            // colunastatus
+            // 
+            this.colunastatus.HeaderText = "Status";
+            this.colunastatus.Name = "colunastatus";
+            this.colunastatus.ReadOnly = true;
+            // 
+            // ColunaPrioridade
+            // 
+            this.ColunaPrioridade.HeaderText = "Prioridade";
+            this.ColunaPrioridade.Name = "ColunaPrioridade";
+            this.ColunaPrioridade.ReadOnly = true;
+            // 
+            // colunaReponsavel
+            // 
+            this.colunaReponsavel.HeaderText = "Responsável";
+            this.colunaReponsavel.Name = "colunaReponsavel";
+            this.colunaReponsavel.ReadOnly = true;
+            this.colunaReponsavel.Width = 120;
+            // 
+            // colunaDataAbertura
+            // 
+            this.colunaDataAbertura.HeaderText = "Data Abertura";
+            this.colunaDataAbertura.Name = "colunaDataAbertura";
+            this.colunaDataAbertura.ReadOnly = true;
+            // 
+            // ColunaLoginCriacao
+            // 
+            this.ColunaLoginCriacao.HeaderText = "Criado por";
+            this.ColunaLoginCriacao.Name = "ColunaLoginCriacao";
+            this.ColunaLoginCriacao.ReadOnly = true;
+            this.ColunaLoginCriacao.Width = 120;
+            // 
+            // ColunadataFechamento
+            // 
+            this.ColunadataFechamento.HeaderText = "Data Fechamento";
+            this.ColunadataFechamento.Name = "ColunadataFechamento";
+            this.ColunadataFechamento.ReadOnly = true;
+            this.ColunadataFechamento.Width = 120;
+            // 
+            // descricaoTb
+            // 
+            this.descricaoTb.Enabled = false;
+            this.descricaoTb.Location = new System.Drawing.Point(12, 529);
+            this.descricaoTb.Multiline = true;
+            this.descricaoTb.Name = "descricaoTb";
+            this.descricaoTb.Size = new System.Drawing.Size(1144, 86);
+            this.descricaoTb.TabIndex = 11;
             // 
             // lblStatus
             // 
@@ -268,14 +344,15 @@
             // 
             // btnSair
             // 
+            this.btnSair.BackColor = System.Drawing.Color.Silver;
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSair.ForeColor = System.Drawing.Color.Navy;
-            this.btnSair.Location = new System.Drawing.Point(1035, 623);
+            this.btnSair.Location = new System.Drawing.Point(1035, 689);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(121, 33);
             this.btnSair.TabIndex = 20;
             this.btnSair.Text = "&Sair";
-            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.UseVisualStyleBackColor = false;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // lblversao
@@ -365,72 +442,146 @@
             this.label3.TabIndex = 28;
             this.label3.Text = "Versão 1.0  2017";
             // 
-            // ColunaChamado
+            // numeroLabel
             // 
-            this.ColunaChamado.HeaderText = "Chamado";
-            this.ColunaChamado.Name = "ColunaChamado";
-            this.ColunaChamado.ReadOnly = true;
-            this.ColunaChamado.Width = 80;
+            this.numeroLabel.AutoSize = true;
+            this.numeroLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numeroLabel.ForeColor = System.Drawing.Color.Navy;
+            this.numeroLabel.Location = new System.Drawing.Point(12, 623);
+            this.numeroLabel.Name = "numeroLabel";
+            this.numeroLabel.Size = new System.Drawing.Size(54, 13);
+            this.numeroLabel.TabIndex = 29;
+            this.numeroLabel.Text = "Número:";
             // 
-            // ColunaDescricao
+            // dataCriacaoLabel
             // 
-            this.ColunaDescricao.HeaderText = "Descrição";
-            this.ColunaDescricao.Name = "ColunaDescricao";
-            this.ColunaDescricao.ReadOnly = true;
-            this.ColunaDescricao.Width = 200;
+            this.dataCriacaoLabel.AutoSize = true;
+            this.dataCriacaoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataCriacaoLabel.ForeColor = System.Drawing.Color.Navy;
+            this.dataCriacaoLabel.Location = new System.Drawing.Point(291, 623);
+            this.dataCriacaoLabel.Name = "dataCriacaoLabel";
+            this.dataCriacaoLabel.Size = new System.Drawing.Size(102, 13);
+            this.dataCriacaoLabel.TabIndex = 30;
+            this.dataCriacaoLabel.Text = "Data de criação:";
             // 
-            // colunaIdCliente
+            // prioridadeLabel
             // 
-            this.colunaIdCliente.HeaderText = "Cliente";
-            this.colunaIdCliente.Name = "colunaIdCliente";
-            this.colunaIdCliente.ReadOnly = true;
-            this.colunaIdCliente.Width = 150;
+            this.prioridadeLabel.AutoSize = true;
+            this.prioridadeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prioridadeLabel.ForeColor = System.Drawing.Color.Navy;
+            this.prioridadeLabel.Location = new System.Drawing.Point(600, 623);
+            this.prioridadeLabel.Name = "prioridadeLabel";
+            this.prioridadeLabel.Size = new System.Drawing.Size(68, 13);
+            this.prioridadeLabel.TabIndex = 31;
+            this.prioridadeLabel.Text = "Prioridade:";
             // 
-            // colunastatus
+            // dataFechamentoLabel
             // 
-            this.colunastatus.HeaderText = "Status";
-            this.colunastatus.Name = "colunastatus";
-            this.colunastatus.ReadOnly = true;
+            this.dataFechamentoLabel.AutoSize = true;
+            this.dataFechamentoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataFechamentoLabel.ForeColor = System.Drawing.Color.Navy;
+            this.dataFechamentoLabel.Location = new System.Drawing.Point(267, 689);
+            this.dataFechamentoLabel.Name = "dataFechamentoLabel";
+            this.dataFechamentoLabel.Size = new System.Drawing.Size(126, 13);
+            this.dataFechamentoLabel.TabIndex = 32;
+            this.dataFechamentoLabel.Text = "Data de fechamento:";
             // 
-            // ColunaPrioridade
+            // abertoPorLabel
             // 
-            this.ColunaPrioridade.HeaderText = "Prioridade";
-            this.ColunaPrioridade.Name = "ColunaPrioridade";
-            this.ColunaPrioridade.ReadOnly = true;
+            this.abertoPorLabel.AutoSize = true;
+            this.abertoPorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.abertoPorLabel.ForeColor = System.Drawing.Color.Navy;
+            this.abertoPorLabel.Location = new System.Drawing.Point(600, 657);
+            this.abertoPorLabel.Name = "abertoPorLabel";
+            this.abertoPorLabel.Size = new System.Drawing.Size(70, 13);
+            this.abertoPorLabel.TabIndex = 33;
+            this.abertoPorLabel.Text = "Aberto por:";
             // 
-            // colunaReponsavel
+            // numeroTb
             // 
-            this.colunaReponsavel.HeaderText = "Responsável";
-            this.colunaReponsavel.Name = "colunaReponsavel";
-            this.colunaReponsavel.ReadOnly = true;
-            this.colunaReponsavel.Width = 120;
+            this.numeroTb.Location = new System.Drawing.Point(72, 620);
+            this.numeroTb.Name = "numeroTb";
+            this.numeroTb.ReadOnly = true;
+            this.numeroTb.Size = new System.Drawing.Size(185, 20);
+            this.numeroTb.TabIndex = 34;
             // 
-            // colunaDataAbertura
+            // dataFechamentoTb
             // 
-            this.colunaDataAbertura.HeaderText = "Data Abertura";
-            this.colunaDataAbertura.Name = "colunaDataAbertura";
-            this.colunaDataAbertura.ReadOnly = true;
+            this.dataFechamentoTb.Location = new System.Drawing.Point(399, 686);
+            this.dataFechamentoTb.Name = "dataFechamentoTb";
+            this.dataFechamentoTb.ReadOnly = true;
+            this.dataFechamentoTb.Size = new System.Drawing.Size(185, 20);
+            this.dataFechamentoTb.TabIndex = 35;
             // 
-            // ColunaLoginCriacao
+            // clienteTb
             // 
-            this.ColunaLoginCriacao.HeaderText = "Criado por";
-            this.ColunaLoginCriacao.Name = "ColunaLoginCriacao";
-            this.ColunaLoginCriacao.ReadOnly = true;
-            this.ColunaLoginCriacao.Width = 120;
+            this.clienteTb.Location = new System.Drawing.Point(72, 654);
+            this.clienteTb.Name = "clienteTb";
+            this.clienteTb.ReadOnly = true;
+            this.clienteTb.Size = new System.Drawing.Size(185, 20);
+            this.clienteTb.TabIndex = 36;
             // 
-            // ColunadataFechamento
+            // abertoPorTb
             // 
-            this.ColunadataFechamento.HeaderText = "Data Fechamento";
-            this.ColunadataFechamento.Name = "ColunadataFechamento";
-            this.ColunadataFechamento.ReadOnly = true;
-            this.ColunadataFechamento.Width = 120;
+            this.abertoPorTb.Location = new System.Drawing.Point(677, 654);
+            this.abertoPorTb.Name = "abertoPorTb";
+            this.abertoPorTb.ReadOnly = true;
+            this.abertoPorTb.Size = new System.Drawing.Size(185, 20);
+            this.abertoPorTb.TabIndex = 38;
+            // 
+            // dataCriacaoTb
+            // 
+            this.dataCriacaoTb.Location = new System.Drawing.Point(399, 620);
+            this.dataCriacaoTb.Name = "dataCriacaoTb";
+            this.dataCriacaoTb.ReadOnly = true;
+            this.dataCriacaoTb.Size = new System.Drawing.Size(185, 20);
+            this.dataCriacaoTb.TabIndex = 37;
+            // 
+            // responsavelCb
+            // 
+            this.responsavelCb.Enabled = false;
+            this.responsavelCb.FormattingEnabled = true;
+            this.responsavelCb.Location = new System.Drawing.Point(399, 654);
+            this.responsavelCb.Name = "responsavelCb";
+            this.responsavelCb.Size = new System.Drawing.Size(185, 21);
+            this.responsavelCb.TabIndex = 40;
+            // 
+            // statusCb
+            // 
+            this.statusCb.Enabled = false;
+            this.statusCb.FormattingEnabled = true;
+            this.statusCb.Location = new System.Drawing.Point(72, 686);
+            this.statusCb.Name = "statusCb";
+            this.statusCb.Size = new System.Drawing.Size(185, 21);
+            this.statusCb.TabIndex = 41;
+            // 
+            // prioridadeTb
+            // 
+            this.prioridadeTb.Location = new System.Drawing.Point(677, 620);
+            this.prioridadeTb.Name = "prioridadeTb";
+            this.prioridadeTb.ReadOnly = true;
+            this.prioridadeTb.Size = new System.Drawing.Size(185, 20);
+            this.prioridadeTb.TabIndex = 42;
             // 
             // sistemaAberturaChamado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(1174, 733);
+            this.ClientSize = new System.Drawing.Size(1174, 737);
+            this.Controls.Add(this.prioridadeTb);
+            this.Controls.Add(this.statusCb);
+            this.Controls.Add(this.responsavelCb);
+            this.Controls.Add(this.abertoPorTb);
+            this.Controls.Add(this.dataCriacaoTb);
+            this.Controls.Add(this.clienteTb);
+            this.Controls.Add(this.dataFechamentoTb);
+            this.Controls.Add(this.numeroTb);
+            this.Controls.Add(this.abertoPorLabel);
+            this.Controls.Add(this.dataFechamentoLabel);
+            this.Controls.Add(this.prioridadeLabel);
+            this.Controls.Add(this.dataCriacaoLabel);
+            this.Controls.Add(this.numeroLabel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -445,18 +596,19 @@
             this.Controls.Add(this.btnExcluirUsuario);
             this.Controls.Add(this.lblRespons);
             this.Controls.Add(this.lblStatus);
-            this.Controls.Add(this.txtDescChamado);
+            this.Controls.Add(this.descricaoTb);
             this.Controls.Add(this.pictureGenius);
             this.Controls.Add(this.dataGridChamado);
             this.Controls.Add(this.btncriarUsuario);
             this.Controls.Add(this.btnSalvarAltr);
-            this.Controls.Add(this.btnEditardesc);
+            this.Controls.Add(this.btnEditarChamado);
             this.Controls.Add(this.btnNovoChamado);
             this.Controls.Add(this.lblDes);
             this.Controls.Add(this.lblnome);
             this.Controls.Add(this.lbl3);
             this.Controls.Add(this.lbl2);
-            this.Controls.Add(this.lbl1);
+            this.Controls.Add(this.clienteLabel);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "sistemaAberturaChamado";
             this.Text = "Genius X Tec.";
@@ -471,18 +623,18 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lbl1;
+        private System.Windows.Forms.Label clienteLabel;
         private System.Windows.Forms.Label lbl2;
         private System.Windows.Forms.Label lbl3;
         private System.Windows.Forms.Label lblnome;
         private System.Windows.Forms.Label lblDes;
         private System.Windows.Forms.Button btnNovoChamado;
-        private System.Windows.Forms.Button btnEditardesc;
+        private System.Windows.Forms.Button btnEditarChamado;
         private System.Windows.Forms.Button btnSalvarAltr;
         private System.Windows.Forms.Button btncriarUsuario;
         private System.Windows.Forms.DataGridView dataGridChamado;
         private System.Windows.Forms.PictureBox pictureGenius;
-        private System.Windows.Forms.TextBox txtDescChamado;
+        private System.Windows.Forms.TextBox descricaoTb;
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Label lblRespons;
         private System.Windows.Forms.Button btnExcluirUsuario;
@@ -506,6 +658,19 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colunaDataAbertura;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColunaLoginCriacao;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColunadataFechamento;
+        private System.Windows.Forms.Label numeroLabel;
+        private System.Windows.Forms.Label dataCriacaoLabel;
+        private System.Windows.Forms.Label prioridadeLabel;
+        private System.Windows.Forms.Label dataFechamentoLabel;
+        private System.Windows.Forms.Label abertoPorLabel;
+        private System.Windows.Forms.TextBox numeroTb;
+        private System.Windows.Forms.TextBox dataFechamentoTb;
+        private System.Windows.Forms.TextBox clienteTb;
+        private System.Windows.Forms.TextBox abertoPorTb;
+        private System.Windows.Forms.TextBox dataCriacaoTb;
+        private System.Windows.Forms.ComboBox responsavelCb;
+        private System.Windows.Forms.ComboBox statusCb;
+        private System.Windows.Forms.TextBox prioridadeTb;
     }
 }
 

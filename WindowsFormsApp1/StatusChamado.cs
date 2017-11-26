@@ -22,6 +22,10 @@ namespace WindowsFormsApp1
             this.descricao = descricao;
         }
 
+        public Boolean fechado() {
+            return id == "7";
+        }
+
         public override string ToString()
         {
             return id + " - " + descricao;

@@ -41,5 +41,19 @@ namespace WindowsFormsApp1
             return chamados;
         }
 
+        public List<StatusChamado> buscarStatus()
+        {
+            String query = "SELECT * FROM status_chamado";
+
+            List<StatusChamado> status = new List<StatusChamado>();
+            foreach (String[] resultado in con.busca(query))
+            {
+                StatusChamado s = new StatusChamado();
+                s.id = resultado[0];
+                s.descricao = resultado[1];
+                status.Add(s);
+            }
+            return status;
+        }
     }
 }

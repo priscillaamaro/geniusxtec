@@ -13,13 +13,25 @@ namespace WindowsFormsApp1
     public partial class sistemaAberturaChamado : Form
     {
         BuscaDeChamados chamados = new BuscaDeChamados();
+        BuscaDeUsuarios buscaDeUsuarios = new BuscaDeUsuarios();
+        ManutencaoChamado manutencaoChamado = new ManutencaoChamado();
 
         public sistemaAberturaChamado()
         {
             InitializeComponent();
-
+            descricaoTb.Enabled=false;
             configuraDataGrid();
             populaDataGrid();
+
+            var usuarios = buscaDeUsuarios.buscarComTipo();
+            this.responsavelCb.DataSource = usuarios;
+            this.responsavelCb.DisplayMember = "nome";
+            this.responsavelCb.ValueMember = "login";
+
+            var status = chamados.buscarStatus();
+            this.statusCb.DataSource = status;
+            this.statusCb.DisplayMember = "descricao";
+            this.statusCb.ValueMember = "id";
         }
 
         private void configuraDataGrid()
@@ -53,14 +65,12 @@ namespace WindowsFormsApp1
 
         private void dataGridChamado_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
         }
 
         private void btnNovoChamado_Click(object sender, EventArgs e)
         {
             addChamado telaAddChamado = new addChamado();
             telaAddChamado.Show();
-
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -107,7 +117,45 @@ namespace WindowsFormsApp1
 
         private void btnSalvarAltr_Click(object sender, EventArgs e)
         {
+            descricaoTb.Enabled = false;
+            statusCb.Enabled = false;
+            responsavelCb.Enabled = false;
 
+            int index = dataGridChamado.CurrentCell.RowIndex;
+            Chamado c = (Chamado)dataGridChamado.Rows[index].DataBoundItem;
+
+            c.status = (StatusChamado)statusCb.SelectedItem;
+            c.usuario_responsavel = (Usuario) responsavelCb.SelectedItem;
+            c.descricao = descricaoTb.Text;
+            
+            manutencaoChamado.atualizar(c);
+
+            MessageBox.Show("Alterações salvas com sucesso!", "Sucesso", MessageBoxButtons.OK);
+            
+            populaDataGrid();
+        }
+
+        private void selecionarChamado(object sender, EventArgs e)
+        {
+            int index = dataGridChamado.CurrentCell.RowIndex;
+            Chamado c = (Chamado) dataGridChamado.Rows[index].DataBoundItem;
+
+            numeroTb.Text = c.id;
+            descricaoTb.Text = c.descricao;
+            clienteTb.Text = c.cliente.ToString();
+            statusCb.Text = c.status.descricao;
+            prioridadeTb.Text = c.prioridade.ToString();
+            dataCriacaoTb.Text = c.data_criacao;
+            responsavelCb.Text = c.usuario_responsavel.nome;
+            abertoPorTb.Text = c.usuario_criacao.ToString();
+            dataFechamentoTb.Text = c.data_fechamento;
+        }
+
+        private void btnEditarChamado_Click(object sender, EventArgs e)
+        {
+            descricaoTb.Enabled = true;
+            statusCb.Enabled = true;
+            responsavelCb.Enabled = true;
         }
     }
 }
