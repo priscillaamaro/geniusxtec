@@ -12,7 +12,8 @@ namespace WindowsFormsApp1
         public String senha { get; set; }
         public TipoUsuario tipoUsuario { get; set; }
         public String nome { get; set; }
-        public String descricaoTipoUsuario { get{ return tipoUsuario.descricao; } }
+        public String descricaoTipoUsuario { get { return tipoUsuario.descricao; } }
+        public String status { get; set; }
 
         public Usuario() { }
         public Usuario(String login, String nome) {

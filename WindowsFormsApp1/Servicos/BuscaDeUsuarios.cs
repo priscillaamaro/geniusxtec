@@ -46,6 +46,7 @@ namespace WindowsFormsApp1
                 user.senha = resultado[1];
                 user.tipoUsuario = new TipoUsuario(resultado[2]);
                 user.nome = resultado[3];
+                user.status = resultado[4];
                 usuarios.Add(user);
             }
             return usuarios;

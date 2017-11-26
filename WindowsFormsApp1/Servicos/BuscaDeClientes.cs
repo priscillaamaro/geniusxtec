@@ -28,5 +28,23 @@ namespace WindowsFormsApp1.Servicos
             }
             return clientes;
         }
+        public List<Cliente> buscarTodos()
+        {
+            String query = "SELECT * FROM cliente";
+
+            List<String[]> resultados = con.busca(query);
+
+            List<Cliente> clientes = new List<Cliente>();
+
+            foreach (String[] resultado in resultados)
+            {
+                Cliente cliente = new Cliente();
+                cliente.id = resultado[0];
+                cliente.nome = resultado[1];
+                cliente.status = resultado[6];
+                clientes.Add(cliente);
+            }
+            return clientes;
+        }
     }
 }
