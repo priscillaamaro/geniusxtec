@@ -36,5 +36,10 @@ namespace WindowsFormsApp1
 
             con.executar(sql, parametros);
         }
+
+        public void salvar(Chamado chamado)
+        {
+            String sql = "INSERT INTO chamado VALUES (@descricao, @valorSenha, @valorTipo, @valorNome)";
+        }
     }
 }
