@@ -12,7 +12,7 @@ namespace WindowsFormsApp1
         Conexao con = new Conexao();
 
         public void salvar(Usuario usuario) {
-            String sql = "INSERT INTO usuario VALUES (@valorLogin, @valorSenha, @valorTipo, @valorNome)";
+            String sql = "INSERT INTO usuario (login, senha, id_tipo_usuario, nome) VALUES (@valorLogin, @valorSenha, @valorTipo, @valorNome)";
 
             List<SqlParameter> parametros = new List<SqlParameter>();
             parametros.Add(new SqlParameter("valorLogin", usuario.login));
